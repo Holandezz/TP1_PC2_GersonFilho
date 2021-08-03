@@ -50,23 +50,6 @@ public class Quadrado extends Retangulo{
 
     @Override
     public String toString() {
-        return "Quadrado{" +
-                "tamanhoLado=" + tamanhoLado +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Quadrado quadrado = (Quadrado) o;
-
-        return tamanhoLado == quadrado.tamanhoLado;
-    }
-
-    @Override
-    public int hashCode() {
-        return tamanhoLado;
+        return "Quadrado -->\nÁrea: " + getArea() + "\nPerímetro: " + getPerimetro() ;
     }
 }

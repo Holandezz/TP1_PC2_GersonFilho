@@ -59,8 +59,6 @@ public class Retangulo extends Quadrilatero{
 
     @Override
     public String toString() {
-        return "Retangulo{" +
-                "origem=" + origem +
-                '}';
+        return "Retângulo -->\nÁrea: " + getArea() + "\nPerímetro: " + getPerimetro() ;
     }
 }

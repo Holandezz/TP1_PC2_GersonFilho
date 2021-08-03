@@ -14,7 +14,7 @@ public class Triangulo extends FiguraGeometrica{
     }
     public double getArea(){
         double semiperimetro = getPerimetro()/2;
-        return Math.sqrt(semiperimetro*(semiperimetro-lado1)*(semiperimetro-lado2)*(semiperimetro-lado3));
+        return Math.sqrt(semiperimetro*((semiperimetro-lado1)*(semiperimetro-lado2)*(semiperimetro-lado3)));
     }
 
     public double getPerimetro() {
@@ -23,8 +23,7 @@ public class Triangulo extends FiguraGeometrica{
 
     @Override
     public String toString() {
-        return "Losango -->\nÁrea: " + getArea() + "\nPerímetro: " + getPerimetro() ;
+        return "Triângulo -->\nÁrea: " + getArea() + "\nPerímetro: " + getPerimetro() ;
     }
 }
 
-}
