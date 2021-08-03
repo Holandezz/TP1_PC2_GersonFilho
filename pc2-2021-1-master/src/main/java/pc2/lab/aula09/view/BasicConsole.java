@@ -26,13 +26,6 @@ public class BasicConsole {
         return in.nextInt();
     }
 
-    public Quadrado askQuadrado(){
-        showMsg("Digite um interio para o tamanho do lado do quadrado");
-        int tamanho  = in.nextInt();
-        Quadrado quad = new Quadrado(tamanho);
-
-        return quad;
-    }
 
     public int askInt(){
         return in.nextInt();
@@ -47,24 +40,49 @@ public class BasicConsole {
         showMsg("Digite uma opção \n" +
                 "1 - Criar Quadrado\n" +
                 "2 - Criar Retangulo\n" +
-                "6 - Apagar Item\n" +
-                "9 - Listar\n" +
-                "7 - Desenhar\n" +
-                "0 - Sair");
+                "3 - Criar Triângulo\n" +
+                "4 - Criar Losango\n" +
+                "5 - Criar Trapézio\n" +
+                "6 - Criar Círculo\n" +
+                "7 - Criar Ponto\n" +
+                "8 - Criar Reta\n" +
+                "A - Apagar Item\n" +
+                "L - Listar\n" +
+                "D - Desenhar\n" +
+                "X - Sair\n");
 
-        int opcao = in.nextInt();
+        String opcao = in.next();
 
         switch (opcao){
-            case 1:
+            case "1":
                 return OpcoesMenuEnum.QUADRADO;
-            case 2:
+            case "2":
                 return OpcoesMenuEnum.RETANGULO;
-            case 7:
+            case "3":
+                return OpcoesMenuEnum.TRIANGULO;
+            case "4":
+                return OpcoesMenuEnum.LOSANGO;
+            case "5":
+                return OpcoesMenuEnum.TRAPEZIO;
+            case "6":
+                return OpcoesMenuEnum.CIRCULO;
+            case "7":
+                return OpcoesMenuEnum.PONTO;
+            case "8":
+                return OpcoesMenuEnum.RETA;
+            case "X":
+                return OpcoesMenuEnum.SAIR;
+            case "A":
+                return OpcoesMenuEnum.APAGAR;
+            case "L":
+                return OpcoesMenuEnum.LISTAR;
+            case "D":
                 return OpcoesMenuEnum.DESENHAR;
-            case 9:
-                return OpcoesMenuEnum.SAIR;
+
             default:
-                return OpcoesMenuEnum.SAIR;
+                showMsg("A opção digitada não é válida.");
+                return OpcoesMenuEnum.ERRO;
+
         }
     }
 

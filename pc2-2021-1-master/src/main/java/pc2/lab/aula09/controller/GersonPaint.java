@@ -2,18 +2,27 @@ package pc2.lab.aula09.controller;
 
 import pc2.lab.aula09.model.*;
 import pc2.lab.aula09.model.enums.OpcoesMenuEnum;
+import pc2.lab.aula09.model.enums.RetaConsole;
 import pc2.lab.aula09.view.BasicConsole;
 import pc2.lab.aula09.view.DesenhoBoard;
 
 import java.util.ArrayList;
 
-public class AlessioPaint {
+public class GersonPaint {
+    private QuadradoConsole quadTela = new QuadradoConsole();
+    private TrianguloConsole trianguloTela = new TrianguloConsole();
+    private CirculoConsole circuloTela = new CirculoConsole();
+    private LosangoConsole losangoTela = new LosangoConsole();
+    private RetanguloConsole retanguloTela = new RetanguloConsole();
+    private PontoConsole pontoTela = new PontoConsole();
+    private RetaConsole retaTela = new RetaConsole();
+    private TrapezioConsole trapTela = new TrapezioConsole();
 
     private FiguraGeometrica[] vetor;
     private BasicConsole tela;
     private DesenhoBoard canvas;
 
-    public AlessioPaint(){
+    public GersonPaint(){
         vetor= new FiguraGeometrica[5];
         tela = new BasicConsole();
         canvas = new DesenhoBoard();
@@ -43,13 +52,14 @@ public class AlessioPaint {
 
             switch (opcao){
                 case QUADRADO:
-                    Quadrado quad = tela.askQuadrado();
+                    Quadrado quad = quadTela.askQuadrado();
                     insertFiguraGeométrica(quad, 0);
                     break;
                 case RETANGULO:
                     Retangulo retangulo = new Retangulo();
                     insertFiguraGeométrica(retangulo, 1);
                     break;
+
                 case LISTAR:
                     //Retangulo retangulo = new Retangulo();
                     //insertFiguraGeométrica(retangulo, 1);

@@ -1,6 +1,6 @@
 package pc2.lab.aula09.model;
 
-import pc2.lab.aula07.BasicConsole;
+import pc2.lab.aula09.view.BasicConsole;
 
 public class CirculoConsole extends BasicConsole {
     public Circulo askCirculo(){
