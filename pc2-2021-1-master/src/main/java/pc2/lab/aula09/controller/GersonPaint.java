@@ -23,7 +23,7 @@ public class GersonPaint {
     private DesenhoBoard canvas;
 
     public GersonPaint(){
-        vetor= new FiguraGeometrica[5];
+        vetor= new FiguraGeometrica[10];
         tela = new BasicConsole();
         canvas = new DesenhoBoard();
     }
