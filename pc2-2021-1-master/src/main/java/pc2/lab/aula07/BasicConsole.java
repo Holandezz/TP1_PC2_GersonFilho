@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class BasicConsole {
 
-    private Scanner in;
+    public Scanner in;
 
     public BasicConsole(){
         in = new Scanner(System.in);
