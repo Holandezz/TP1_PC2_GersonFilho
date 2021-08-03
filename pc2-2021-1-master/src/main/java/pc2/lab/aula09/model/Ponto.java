@@ -1,6 +1,6 @@
 package pc2.lab.aula09.model;
 
-public class Ponto {
+public class Ponto extends FiguraGeometrica{
 
     private int x;
     private int y;

@@ -2,59 +2,23 @@ package pc2.lab.aula09.model;
 
 public class Retangulo extends Quadrilatero{
 
-    public Retangulo() {
-        this(1, 2);
-//        inferiorEsquerdo = new Ponto(0,0);
-//        inferiorDireito = new Ponto(2,0);
-//        superiorDireito = new Ponto(1,2);
-//        superiorEsquerdo = new Ponto(0,2);
+    private int altura, base;
+
+    public Retangulo(){
+        this(0,0);
+    }
+    public Retangulo(int altura, int base){
+
+        this.altura=altura;
+        this.base=base;
+
+    }
+    public double getArea(){
+        return altura*base;
     }
 
-    public Retangulo(int base, int altura) {
-        inferiorEsquerdo = new Ponto(0,0);
-        inferiorDireito = new Ponto(base,0);
-        superiorDireito = new Ponto(base,altura);
-        superiorEsquerdo = new Ponto(0,altura);
-    }
-
-    public Ponto getInferiorEsquerdo() {
-        return inferiorEsquerdo;
-    }
-
-    public void setInferiorEsquerdo(Ponto inferiorEsquerdo) {
-        this.inferiorEsquerdo = inferiorEsquerdo;
-    }
-
-    public Ponto getInferiorDireito() {
-        return inferiorDireito;
-    }
-
-    public void setInferiorDireito(Ponto inferiorDireito) {
-        this.inferiorDireito = inferiorDireito;
-    }
-
-    public Ponto getSuperiorDireito() {
-        return superiorDireito;
-    }
-
-    public void setSuperiorDireito(Ponto superiorDireito) {
-        this.superiorDireito = superiorDireito;
-    }
-
-    public Ponto getSuperiorEsquerdo() {
-        return superiorEsquerdo;
-    }
-
-    public void setSuperiorEsquerdo(Ponto superiorEsquerdo) {
-        this.superiorEsquerdo = superiorEsquerdo;
-    }
-
-    public double getAreaRetangulo(){
-        return superiorDireito.getX() * superiorDireito.getY();
-    }
-
-    public double getPerimetroRetangulo(){
-        return superiorDireito.getX()*2 + superiorDireito.getY()*2;
+    public double getPerimetro() {
+        return (altura*2)+(base*2);
     }
 
     @Override

@@ -1,51 +1,24 @@
 package pc2.lab.aula09.model;
 
-public class Quadrado extends Retangulo{
+public class Quadrado extends FiguraGeometrica{
 
-    private int tamanhoLado;
+    private int lado;
 
     public Quadrado(){
-        this(1);
+        this(0);
     }
+    public Quadrado(int lado){
 
-    public Quadrado(int tamanhoLado){
-        this(new Ponto(0,0), tamanhoLado);
-    }
+        this.lado=lado;
 
-    public Quadrado(Ponto origem, int tamanhoLado) {
-        this.tamanhoLado = tamanhoLado;
-        this.origem = origem;
-        this.setInferiorEsquerdo(origem);
-
-        this.getInferiorEsquerdo().setX(origem.getX()+tamanhoLado);
-        this.getInferiorEsquerdo().setY(origem.getY());
-
-        this.setInferiorDireito(new Ponto(origem.getX()+tamanhoLado, origem.getY()));
-
-        this.setSuperiorDireito(new Ponto(origem.getX()+tamanhoLado, origem.getY()+tamanhoLado));
-        this.setSuperiorEsquerdo(new Ponto(origem.getX(), origem.getY()+tamanhoLado));
-    }
-
-    public void setTamanho(int tamanhoLado){
-        inferiorEsquerdo = new Ponto(0,0);
-        inferiorDireito = new Ponto(0,tamanhoLado);
-        superiorDireito = new Ponto(tamanhoLado,tamanhoLado);
-        superiorEsquerdo = new Ponto(tamanhoLado,0);
-    }
-
-    public void setOrigem(int tamanhoLado){
-        inferiorEsquerdo = new Ponto(0,0);
-        inferiorDireito = new Ponto(0,tamanhoLado);
-        superiorDireito = new Ponto(tamanhoLado,tamanhoLado);
-        superiorEsquerdo = new Ponto(tamanhoLado,0);
     }
 
     public double getArea(){
-        return tamanhoLado*tamanhoLado;
+        return lado*lado;
     }
 
     public double getPerimetro(){
-        return tamanhoLado*4;
+        return lado*4;
     }
 
     @Override

@@ -3,6 +3,7 @@ package pc2.lab.aula09.model;
 public class Triangulo extends FiguraGeometrica{
 
     private int lado1,lado2,lado3;
+    private double perimetro,area;
 
     public Triangulo(){
         this(1,1,1);
@@ -11,19 +12,27 @@ public class Triangulo extends FiguraGeometrica{
         this.lado1 = lado1;
         this.lado2 = lado2;
         this.lado3 = lado3;
-    }
-    public double getArea(){
-        double semiperimetro = getPerimetro()/2;
-        return Math.sqrt(semiperimetro*((semiperimetro-lado1)*(semiperimetro-lado2)*(semiperimetro-lado3)));
+        getPerimetro();
+        getArea();
     }
 
     public double getPerimetro() {
-        return lado1+lado2+lado3;
+        perimetro = lado1+lado2+lado3;
+        return perimetro;
     }
+
+    public double getArea() {
+        double semiperimetro = perimetro / 2;
+        //System.out.println(semiperimetro);
+        area = Math.sqrt(semiperimetro * ((semiperimetro - lado1) * (semiperimetro - lado2) * (semiperimetro - lado3)));
+        //System.out.println(area);
+        return area;
+    }
+
 
     @Override
     public String toString() {
-        return "Triângulo -->\nÁrea: " + getArea() + "\nPerímetro: " + getPerimetro() ;
+        return "Triângulo -->\nÁrea: " + area + "\nPerímetro: " + perimetro ;
     }
 }
 
