@@ -1,9 +1,16 @@
 package pc2.lab.aula09.model;
 
+/**
+ * A classe triângulo é usada para criar triângulos com os dados inseridos pelo usuário, nela é realizado o cálculo da área e do perímetro do triângulo.
+ *
+ *
+ *
+ */
 public class Triangulo extends FiguraGeometrica{
 
     private int lado1,lado2,lado3;
     private double perimetro,area;
+
 
     public Triangulo(){
         this(1,1,1);
