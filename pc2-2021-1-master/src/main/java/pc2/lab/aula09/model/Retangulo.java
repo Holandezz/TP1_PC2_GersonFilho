@@ -1,5 +1,15 @@
 package pc2.lab.aula09.model;
-
+/**
+ * A classe retângulo é usada para criar retângulos, nela é realizado o cálculo da área e do perímetro do retângulo.
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
 public class Retangulo extends Quadrilatero{
 
     private int altura, base;
