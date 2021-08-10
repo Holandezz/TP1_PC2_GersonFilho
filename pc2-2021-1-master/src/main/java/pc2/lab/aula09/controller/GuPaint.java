@@ -37,10 +37,10 @@ public class GuPaint {
             opcao = tela.askOpcaoMenuPrincial();
 
             tela.showMsg("escolhi: " + opcao + "\n\n");
-
+            Enum2 optionSubmenu = Enum2.LISTAR;
             switch (opcao) {
                 case QUADRADO:
-                    Enum2 optionSubmenu = Enum2.LISTAR;
+
                     do {
                         optionSubmenu = Submenu.subMenu();
                         switch (optionSubmenu) {
@@ -63,33 +63,175 @@ public class GuPaint {
                     }
                     while (optionSubmenu != Enum2.VOLTAR);
                     break;
+
                 case RETANGULO:
-                    Retangulo retangulo = retanguloTela.askRetangulo();
-                    insertFiguraGeométrica(retangulo);
+                    do {
+                        optionSubmenu = Submenu.subMenu();
+                        switch (optionSubmenu) {
+                            case NOVO:
+                                Retangulo retangulo = retanguloTela.askRetangulo();
+                                insertFiguraGeométrica(retangulo);
+                                break;
+                            case EDITAR:
+
+                            case LISTAR:
+
+                            case MOSTRAR:
+
+                            case EXCLUIR:
+
+                            case VOLTAR:
+
+                        }
+
+                    }
+                    while (optionSubmenu != Enum2.VOLTAR);
                     break;
+
+
                 case TRIANGULO:
-                    Triangulo triangulo = trianguloTela.askTriangulo();
-                    insertFiguraGeométrica(triangulo);
+                    do {
+                        optionSubmenu = Submenu.subMenu();
+                        switch (optionSubmenu) {
+                            case NOVO:
+                                Triangulo triangulo = trianguloTela.askTriangulo();
+                                insertFiguraGeométrica(triangulo);
+                                break;
+                            case EDITAR:
+
+                            case LISTAR:
+
+                            case MOSTRAR:
+
+                            case EXCLUIR:
+
+                            case VOLTAR:
+
+                        }
+
+                    }
+                    while (optionSubmenu != Enum2.VOLTAR);
                     break;
+
                 case TRAPEZIO:
-                    Trapezio trapezio = trapTela.askTrapezio();
-                    insertFiguraGeométrica(trapezio);
+                    do {
+                        optionSubmenu = Submenu.subMenu();
+                        switch (optionSubmenu) {
+                            case NOVO:
+                                Trapezio trapezio = trapTela.askTrapezio();
+                                insertFiguraGeométrica(trapezio);
+                                break;
+                            case EDITAR:
+
+                            case LISTAR:
+
+                            case MOSTRAR:
+
+                            case EXCLUIR:
+
+                            case VOLTAR:
+
+                        }
+
+                    }
+                    while (optionSubmenu != Enum2.VOLTAR);
                     break;
+
+
                 case RETA:
-                    Reta reta = retaTela.askReta();
-                    insertFiguraGeométrica(reta);
-                    break;
+                    do {
+                    optionSubmenu = Submenu.subMenu();
+                    switch (optionSubmenu) {
+                        case NOVO:
+                            Reta reta = retaTela.askReta();
+                            insertFiguraGeométrica(reta);
+                            break;
+                        case EDITAR:
+
+                        case LISTAR:
+
+                        case MOSTRAR:
+
+                        case EXCLUIR:
+
+                        case VOLTAR:
+
+                    }
+
+            }
+            while (optionSubmenu != Enum2.VOLTAR);
+            break;
                 case LOSANGO:
-                    Losangulo losango = losangoTela.askLosango();
-                    insertFiguraGeométrica(losango);
+                    do {
+                        optionSubmenu = Submenu.subMenu();
+                        switch (optionSubmenu) {
+                            case NOVO:
+                                Losangulo losango = losangoTela.askLosango();
+                                insertFiguraGeométrica(losango);
+                                break;
+                            case EDITAR:
+
+                            case LISTAR:
+
+                            case MOSTRAR:
+
+                            case EXCLUIR:
+
+                            case VOLTAR:
+
+                        }
+
+                    }
+                    while (optionSubmenu != Enum2.VOLTAR);
                     break;
+
+
                 case PONTO:
-                    Ponto ponto = pontoTela.askPonto();
-                    insertFiguraGeométrica(ponto);
+                    do {
+                        optionSubmenu = Submenu.subMenu();
+                        switch (optionSubmenu) {
+                            case NOVO:
+                                Ponto ponto = pontoTela.askPonto();
+                                insertFiguraGeométrica(ponto);
+                                break;
+                            case EDITAR:
+
+                            case LISTAR:
+
+                            case MOSTRAR:
+
+                            case EXCLUIR:
+
+                            case VOLTAR:
+
+                        }
+
+                    }
+                    while (optionSubmenu != Enum2.VOLTAR);
                     break;
+
                 case CIRCULO:
-                    Circulo circulo = circuloTela.askCirculo();
-                    insertFiguraGeométrica(circulo);
+                    do {
+                        optionSubmenu = Submenu.subMenu();
+                        switch (optionSubmenu) {
+                            case NOVO:
+                                Circulo circulo = circuloTela.askCirculo();
+                                insertFiguraGeométrica(circulo);
+                                break;
+                            case EDITAR:
+
+                            case LISTAR:
+
+                            case MOSTRAR:
+
+                            case EXCLUIR:
+
+                            case VOLTAR:
+
+                        }
+
+                    }
+                    while (optionSubmenu != Enum2.VOLTAR);
                     break;
                 case LISTAR:
                     listar();
