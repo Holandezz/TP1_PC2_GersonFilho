@@ -6,10 +6,10 @@ import pc2.lab.aula09.model.enums.OpcoesMenuEnum;
 import pc2.lab.aula09.model.enums.RetaConsole;
 import pc2.lab.aula09.view.BasicConsole;
 import pc2.lab.aula09.view.DesenhoBoard;
+import pc2.lab.aula09.view.Menu2;
 
-import java.util.ArrayList;
-
-public class GersonPaint {
+public class GuPaint {
+    private Menu2 Submenu;
     private QuadradoConsole quadTela = new QuadradoConsole();
     private TrianguloConsole trianguloTela = new TrianguloConsole();
     private CirculoConsole circuloTela = new CirculoConsole();
@@ -23,10 +23,11 @@ public class GersonPaint {
     private BasicConsole tela;
     private DesenhoBoard canvas;
 
-    public GersonPaint(){
+    public GuPaint(){
         vetor= new FiguraGeometrica[10];
         tela = new BasicConsole();
         canvas = new DesenhoBoard();
+        Submenu = new Menu2();
     }
 
     public void mostrarMenu() {
@@ -39,8 +40,28 @@ public class GersonPaint {
 
             switch (opcao) {
                 case QUADRADO:
-                    Quadrado quad = quadTela.askQuadrado();
-                    insertFiguraGeométrica(quad);
+                    Enum2 optionSubmenu = Enum2.LISTAR;
+                    do {
+                        optionSubmenu = Submenu.subMenu();
+                        switch (optionSubmenu) {
+                            case NOVO:
+                                Quadrado quad = quadTela.askQuadrado();
+                                insertFiguraGeométrica(quad);
+                                break;
+                            case EDITAR:
+
+                            case LISTAR:
+
+                            case MOSTRAR:
+
+                            case EXCLUIR:
+
+                            case VOLTAR:
+
+                        }
+
+                    }
+                    while (optionSubmenu != Enum2.VOLTAR);
                     break;
                 case RETANGULO:
                     Retangulo retangulo = retanguloTela.askRetangulo();

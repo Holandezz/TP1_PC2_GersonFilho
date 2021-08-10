@@ -10,3 +10,4 @@ public class CirculoConsole extends BasicConsole {
         return circulo;
     }
 }
+

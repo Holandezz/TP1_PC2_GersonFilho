@@ -1,7 +1,6 @@
 package pc2.lab.aula09.view;
 
 import pc2.lab.aula09.model.enums.OpcoesMenuEnum;
-import pc2.lab.aula09.model.Quadrado;
 
 import java.util.Scanner;
 
@@ -13,9 +12,13 @@ public class BasicConsole {
         in = new Scanner(System.in);
     }
 
+    public String askStr(String msg){
+        return in.next();
+    }
     public void showLnMsg(String msg){
         System.out.println(msg);
     }
+
 
     public void showMsg(String msg){
         System.out.print(msg);
