@@ -51,7 +51,7 @@ public class GuPaint {
                             case EDITAR:
 
                             case LISTAR:
-
+                                listar();
                             case MOSTRAR:
 
                             case EXCLUIR:
@@ -75,7 +75,7 @@ public class GuPaint {
                             case EDITAR:
 
                             case LISTAR:
-
+                                listar();
                             case MOSTRAR:
 
                             case EXCLUIR:
@@ -100,7 +100,7 @@ public class GuPaint {
                             case EDITAR:
 
                             case LISTAR:
-
+                                  listar();
                             case MOSTRAR:
 
                             case EXCLUIR:
@@ -124,7 +124,7 @@ public class GuPaint {
                             case EDITAR:
 
                             case LISTAR:
-
+                                 listar();
                             case MOSTRAR:
 
                             case EXCLUIR:
@@ -149,7 +149,7 @@ public class GuPaint {
                         case EDITAR:
 
                         case LISTAR:
-
+                             listar();
                         case MOSTRAR:
 
                         case EXCLUIR:
@@ -172,7 +172,7 @@ public class GuPaint {
                             case EDITAR:
 
                             case LISTAR:
-
+                                 listar();
                             case MOSTRAR:
 
                             case EXCLUIR:
@@ -197,7 +197,7 @@ public class GuPaint {
                             case EDITAR:
 
                             case LISTAR:
-
+                                 listar();
                             case MOSTRAR:
 
                             case EXCLUIR:
@@ -221,7 +221,7 @@ public class GuPaint {
                             case EDITAR:
 
                             case LISTAR:
-
+                                  listar("Circulo");
                             case MOSTRAR:
 
                             case EXCLUIR:
@@ -264,6 +264,13 @@ public class GuPaint {
                 }
             }
         }
+    public void listar(String tipo){
+        for (int i = 0; i < vetor.length; i++) {
+            if (vetor[i] != null) {
+                System.out.println((i+1) + " - " +vetor[i].toString());
+            }
+        }
+    }
         public boolean insertFiguraGeométrica (FiguraGeometrica fig){
             for (int i = 0; i < vetor.length; i++) {
                 if (i == vetor.length - 1 && vetor[i] != null) {
