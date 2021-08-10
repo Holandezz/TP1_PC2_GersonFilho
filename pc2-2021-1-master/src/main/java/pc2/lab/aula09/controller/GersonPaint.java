@@ -1,6 +1,7 @@
 package pc2.lab.aula09.controller;
 
 import pc2.lab.aula09.model.*;
+import pc2.lab.aula09.model.enums.Enum2;
 import pc2.lab.aula09.model.enums.OpcoesMenuEnum;
 import pc2.lab.aula09.model.enums.RetaConsole;
 import pc2.lab.aula09.view.BasicConsole;
